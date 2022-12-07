@@ -26,7 +26,7 @@ Users should be able to:
 
 ### Links
 
-- Live Site URL: [https://github.com/mironalinnft-preview-card-component-main/](https://github.com/mironalinnft-preview-card-component-main/)
+- Live Site URL: [https://mironalin.github.io/nft-preview-card-component-main/](https://mironalin.github.io/nft-preview-card-component-main/)
 
 ### Built with
 
