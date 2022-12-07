@@ -1,0 +1,174 @@
+:root {
+    --ff-base: 'Outfit', sans-serif;
+    --fw-bold: 600;
+    --fw-regular: 400;
+    --fw-light: 300;
+
+    --clr-primary-400: hsl(178, 100%, 50%);
+    --clr-primary-200: hsl(215, 51%, 70%);
+    
+    --clr-neutral-800: hsl(217, 54%, 11%);
+    --clr-neutral-600: hsl(216, 50%, 16%);
+    --clr-neutral-400: hsl(215, 32%, 27%);
+    --clr-neutral-100: hsl(0, 0%, 100%);
+}
+
+*, *::before,m *::after {
+    box-sizing: border-box;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    height: 100%;
+}
+
+img, picture, svg, video {
+    display: block;
+    max-width: 100%;
+}
+
+input, textarea, button, select {
+    font: inherit;
+}
+
+body {
+    font-size: 1.125rem;
+    font-family: var(--ff-base);
+    background-color: var(--clr-neutral-800);
+    color: var(--clr-primary-200);
+    min-height: 100vh;
+    display: grid;
+    place-content: center;
+}
+
+.card {
+    --content-margin: 1.5rem;    
+    max-width: 375px;
+    margin: 1rem;
+    background-color: var(--clr-neutral-600);
+    border-radius: 1rem;
+    overflow: hidden;
+    box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px;
+}
+
+.card-image {
+    margin: var(--content-margin);
+    position: relative;
+}
+
+.card-image-hover {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 255, 247, .4);
+    border-radius: 0.5rem;
+    display: none;
+}
+
+.card-image-hover .card-eye {
+    width: 50px;
+    height: 50px;
+    display: block;
+    margin: auto;
+}
+
+.card-image:hover .card-image-hover {
+    display: flex;
+    opacity: 1;
+}
+
+.card-image-corners {
+    border-radius: 0.5rem;
+}
+
+.card-content { 
+    margin: var(--content-margin);
+}
+
+.card-nft-id {
+    font-weight: var(--fw-bold);
+    font-size: 1.5rem;
+    color: var(--clr-neutral-100);
+}
+
+.card-nft-id:hover {
+    cursor: pointer;
+    color: var(--clr-primary-400);
+}
+
+.card-nft-description {
+    font-weight: var(--fw-light);
+    font-size: 1rem;
+    margin: 1rem 0;
+}
+
+.card-details-flex {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.5rem 0 1rem 0;
+    border-bottom: 1px solid var(--clr-neutral-400);
+}
+
+.card-details-price {
+    color: var(--clr-primary-400);
+    font-weight: var(--fw-bold);
+    font-size: 1rem;
+    display: inline-flex;
+    gap: 0.4rem;
+    align-items: center;
+    justify-content: center;
+}
+
+.card-details-time { 
+    font-size: 1rem;
+    display: inline-flex;
+    gap: 0.4rem;
+    align-items: center;
+    justify-content: center;
+}
+
+.card-details-price[icon="crystal"]::before {
+    content: "";
+    width: 11px;
+    height: 18px;
+    background-image: url(images/icon-ethereum.svg);
+}
+
+.card-details-time[icon="clock"]::before {
+    content: "";
+    width: 17px;
+    height: 17px;
+    background-image: url(images/icon-clock.svg);
+}
+
+.card-nft-creator {
+    padding: 1.25rem 0 0 0;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+}
+
+.card-nft-creator-avatar {
+    height: 45px;
+    width: auto;
+    border: 2px solid var(--clr-neutral-100);
+    border-radius: 50%;
+}
+
+.white-text {
+    color: var(--clr-neutral-100);
+}
+
+.white-text:hover {
+    cursor: pointer;
+    color: var(--clr-primary-400);
+}
